@@ -68,6 +68,7 @@ namespace MyEngine
             {
                 renderInfo.isFBOView = true;
                 renderInfo.FBOViewID = pFrameBufferView->FBOID;
+                renderInfo.filter = static_cast<int>(pFrameBufferView->filter);
             }
 
             TilingComponent* pTiling = pScene->Get<TilingComponent>(entityId);

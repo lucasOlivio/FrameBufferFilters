@@ -81,6 +81,7 @@ namespace MyEngine
 
 			if (renderInfo.isFBOView)
 			{
+				pShader->SetUniformInt("FBOViewFilter", renderInfo.filter);
 				pFrameBufferManager->BindFBOText(renderInfo.FBOViewID);
 			}
 
@@ -88,6 +89,7 @@ namespace MyEngine
 
 			if (renderInfo.isFBOView)
 			{
+				pShader->SetUniformInt("FBOViewFilter", 0);
 				pShader->SetUniformInt("isFBOView", false);
 			}
 		}

@@ -27,17 +27,17 @@
         },
         "transform": {
             "position": [
-                1517.1966552734375,
-                1111.0316162109375,
-                2125.429931640625
+                1695.706298828125,
+                237.844482421875,
+                1703.243896484375
             ],
             "orientation": [
-                0.9269096255302429,
-                -0.260041207075119,
-                0.2605288624763489,
-                0.07308787107467651
+                -0.9230727553367615,
+                0.010174307972192764,
+                -0.38446763157844543,
+                -0.00423401640728116
             ],
-            "scale": 10.0
+            "scale": 1.0
         }
     },
     {
@@ -206,7 +206,9 @@
                 "skybox.ply"
             ],
             "FBOIDs": [
-                0
+                0,
+                1,
+                2
             ]
         }
     },
@@ -320,7 +322,8 @@
                 "floor.ply"
             ],
             "FBOIDs": [
-                0
+                0,
+                2
             ]
         },
         "tiling": {
@@ -372,7 +375,8 @@
                 "floor.ply"
             ],
             "FBOIDs": [
-                0
+                0,
+                2
             ]
         },
         "tiling": {
@@ -424,7 +428,8 @@
                 "floor.ply"
             ],
             "FBOIDs": [
-                0
+                0,
+                2
             ]
         },
         "tiling": {
@@ -476,7 +481,8 @@
                 "floor.ply"
             ],
             "FBOIDs": [
-                0
+                0,
+                2
             ]
         },
         "tiling": {
@@ -528,7 +534,8 @@
                 "wall_window.ply"
             ],
             "FBOIDs": [
-                0
+                0,
+                2
             ]
         },
         "tiling": {
@@ -580,7 +587,8 @@
                 "wall_window.ply"
             ],
             "FBOIDs": [
-                0
+                0,
+                2
             ]
         },
         "tiling": {
@@ -632,7 +640,8 @@
                 "wall_window.ply"
             ],
             "FBOIDs": [
-                0
+                0,
+                2
             ]
         },
         "tiling": {
@@ -684,7 +693,8 @@
                 "wall_window.ply"
             ],
             "FBOIDs": [
-                0
+                0,
+                2
             ]
         },
         "tiling": {
@@ -736,7 +746,8 @@
                 "floor.ply"
             ],
             "FBOIDs": [
-                0
+                0,
+                2
             ]
         },
         "tiling": {
@@ -788,13 +799,13 @@
         },
         "material": {
             "name": "matwater",
-            "alphaTexture": "transparent.bmp",
+            "alphaTexture": "water_transparency.bmp",
             "colorTextures": [
                 "Water_Texture_01.bmp",
                 ""
             ],
             "colorTexturesRatios": [
-                1.0,
+                0.5,
                 0.0,
                 0.0
             ],
@@ -839,27 +850,14 @@
         }
     },
     {
-        "camera": {
-            "upVector": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "distance": 0.0,
-            "height": 0.0,
-            "offsetTarget": 0.0,
-            "fovy": 0.0,
-            "zNear": 0.0,
-            "zFar": 0.0
-        },
         "tag": {
             "name": "water"
         },
         "transform": {
             "position": [
                 750.0,
-                -67.0,
-                650.0
+                -55.0,
+                750.0
             ],
             "orientation": [
                 0.0,
@@ -867,11 +865,11 @@
                 0.0,
                 0.0
             ],
-            "scale": 10.0
+            "scale": 7.0
         },
         "model": {
             "isActive": 1,
-            "doNotLight": 0,
+            "doNotLight": 1,
             "isWireframe": 0,
             "isDynamic": 0,
             "useDefaultColor": 0,
@@ -887,11 +885,13 @@
                 "flat1k.ply"
             ],
             "FBOIDs": [
-                0
+                0,
+                2
             ]
         },
         "framebufferView": {
-            "FBOID": 1
+            "FBOID": 1,
+            "filter": 1
         }
     },
     {
@@ -975,7 +975,7 @@
                 0.0,
                 0.0
             ],
-            "scale": 10.0
+            "scale": 8.0
         },
         "model": {
             "isActive": 1,
@@ -995,7 +995,9 @@
                 "torch.ply"
             ],
             "FBOIDs": [
-                0
+                0,
+                1,
+                2
             ]
         }
     },
@@ -1006,14 +1008,14 @@
         "transform": {
             "position": [
                 750.0,
-                475.0,
+                375.0,
                 750.0
             ],
             "orientation": [
-                0.9876721501350403,
-                -0.08641007542610168,
-                -0.011376090347766876,
-                0.13002951443195343
+                0.9725809097290039,
+                -0.08508975803852081,
+                -0.01886393316090107,
+                0.21561600267887115
             ],
             "scale": 200.0
         },
@@ -1081,7 +1083,8 @@
                 "sphere.ply"
             ],
             "FBOIDs": [
-                0
+                0,
+                2
             ]
         }
     },
@@ -1102,9 +1105,9 @@
             ],
             "cubeTexture": "",
             "offset": [
-                0.5,
-                0.5,
-                0.5
+                0.0,
+                0.0,
+                0.0
             ],
             "currOffset": [
                 0.0,
@@ -1165,7 +1168,7 @@
             "name": "textwatertransparency"
         },
         "texture": {
-            "fileName": "transparent.bmp",
+            "fileName": "water_transparency.bmp",
             "textureType": 4,
             "vecTextures": []
         }
@@ -1177,10 +1180,10 @@
                 1.0,
                 0.0
             ],
-            "distance": 0.10000000149011612,
+            "distance": 500.0,
             "height": 0.0,
             "offsetTarget": 0.0,
-            "fovy": 0.6000000238418579,
+            "fovy": 1.149999976158142,
             "zNear": 1.0,
             "zFar": 10000.0
         },
@@ -1189,22 +1192,192 @@
         },
         "transform": {
             "position": [
-                748.6654052734375,
-                -101.09970092773438,
-                689.6063842773438
+                725.0,
+                -1000.0,
+                800.0
             ],
             "orientation": [
-                -0.609308123588562,
-                -0.7725518345832825,
-                0.11061935871839523,
-                -0.1402522474527359
+                0.7071067690849304,
+                0.7071067690849304,
+                0.0,
+                0.0
             ],
             "scale": 10.0
         },
         "framebuffer": {
             "cameraId": 27,
+            "width": 210,
+            "height": 210
+        }
+    },
+    {
+        "camera": {
+            "upVector": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "distance": 0.0,
+            "height": 0.0,
+            "offsetTarget": 0.0,
+            "fovy": 0.0,
+            "zNear": 0.0,
+            "zFar": 0.0
+        },
+        "tag": {
+            "name": "topglass"
+        },
+        "transform": {
+            "position": [
+                750.0,
+                500.0,
+                750.0
+            ],
+            "orientation": [
+                -4.371138828673793e-8,
+                4.371138828673793e-8,
+                1.910685465164705e-15,
+                1.0
+            ],
+            "scale": 10.0
+        },
+        "model": {
+            "isActive": 1,
+            "doNotLight": 1,
+            "isWireframe": 0,
+            "isDynamic": 0,
+            "useDefaultColor": 0,
+            "useTransparency": 1,
+            "defaultColor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "useColorTexture": 1,
+            "material": "matglass",
+            "models": [
+                "flat1k.ply"
+            ],
+            "FBOIDs": [
+                0,
+                1
+            ]
+        },
+        "framebuffer": {
+            "cameraId": 29,
             "width": 1080,
             "height": 1080
+        },
+        "framebufferView": {
+            "FBOID": 2,
+            "filter": 2
+        }
+    },
+    {
+        "camera": {
+            "upVector": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "distance": 2250.0,
+            "height": 0.0,
+            "offsetTarget": 0.0,
+            "fovy": 0.6200000047683716,
+            "zNear": 1.0,
+            "zFar": 10000.0
+        },
+        "tag": {
+            "name": "Cameraup"
+        },
+        "transform": {
+            "position": [
+                750.0,
+                2250.0,
+                775.0
+            ],
+            "orientation": [
+                0.7071067690849304,
+                -0.7071067690849304,
+                -0.0,
+                0.0
+            ],
+            "scale": 1.0
+        }
+    },
+    {
+        "tag": {
+            "name": "textglasstransparency"
+        },
+        "texture": {
+            "fileName": "glass_transparency.bmp",
+            "textureType": 4,
+            "vecTextures": []
+        }
+    },
+    {
+        "tag": {
+            "name": "matglass"
+        },
+        "material": {
+            "name": "matglass",
+            "alphaTexture": "glass_transparency.bmp",
+            "colorTextures": [
+                "brokenglass.bmp"
+            ],
+            "colorTexturesRatios": [
+                0.75,
+                0.0,
+                0.0
+            ],
+            "cubeTexture": "",
+            "offset": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "currOffset": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "offsetHeightMap": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "currOffsetHeightMap": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "offsetMove": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "discardTexture": "",
+            "heightMapTexture": "",
+            "heightScale": 0.0,
+            "isEmissive": 0,
+            "normalTexture": "",
+            "specularTexture": "",
+            "useAlphaTexture": 1,
+            "useCubeTexture": 0,
+            "useDiscardTexture": 0,
+            "useHeightMap": 0,
+            "useNormalTexture": 0,
+            "useSpecularTexture": 0
+        }
+    },
+    {
+        "tag": {
+            "name": "textbrokenglass"
+        },
+        "texture": {
+            "fileName": "brokenglass.bmp",
+            "textureType": 0,
+            "vecTextures": []
         }
     }
 ]

@@ -1,10 +1,14 @@
 #include "pch.h"
 
 #include "SceneSerializerJSON.h"
+
 #include "Engine/Utils/ParserJSON.h"
+
 #include "Engine/ECS/SingletonComponents/GraphicsLocator.h"
 #include "Engine/ECS/SingletonComponents/CoreLocator.h"
 #include "Engine/ECS/SingletonComponents/PhysicsLocator.h"
+
+#include "Engine/Graphics/FrameBuffers/FrameBuffersProperties.h"
 
 #include <rapidjson/filereadstream.h>
 #include <rapidjson/filewritestream.h>
@@ -541,6 +545,7 @@ namespace MyEngine
         ParserJSON parser = ParserJSON();
 
         parser.SetMember(jsonObject, "FBOID", framebufferViewIn.FBOID, allocator);
+        parser.SetMember(jsonObject, "filter", framebufferViewIn.filter, allocator);
 
         return true;
     }
@@ -1124,6 +1129,10 @@ namespace MyEngine
         ParserJSON parser = ParserJSON();
 
         parser.GetValue(jsonObject["FBOID"], framebufferViewOut.FBOID);
+
+        int filter = static_cast<int>(framebufferViewOut.filter);
+        parser.GetValue(jsonObject["filter"], filter);
+        framebufferViewOut.filter = static_cast<eFBFilter>(filter);
 
         return true;
     }

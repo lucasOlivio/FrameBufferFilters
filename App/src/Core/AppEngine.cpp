@@ -46,9 +46,6 @@ namespace MyEngine
 		pStates->mainSystems.push_back("MaterialOffsetSystem");
 		pStates->mainSystems.push_back("AnimationSystem");
 
-		// Gameplayer
-		pStates->mainSystems.push_back("PlayerControllerSystem");
-
 		// TODO: This could come from a config file
 		// TODO: Could this be categorized to avoid having to put all in the config?
 		pStates->mapStateSystems[eGameStates::NOT_STARTED] = {};
@@ -69,7 +66,7 @@ namespace MyEngine
 			"SotBodyConstraintsSystem",
 			// Gameplay
 			//"PlayerControllerSystem",
-			"SteeringBehaviorSystem"
+			"FlyingCameraSystem"
 
 			// Debug
 			,"DebugSystem",

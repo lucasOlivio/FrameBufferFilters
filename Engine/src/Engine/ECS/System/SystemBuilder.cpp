@@ -33,6 +33,7 @@
 #include "Engine/Physics/SoftBody/SoftBodyResponseSystem.h"
 
 #include "Engine/Gameplay/SteeringBehaviorSystem.h"
+#include "Engine/Gameplay/FlyingCameraSystem.h"
 
 #include "Engine/Debug/DebugSystem.h"
 #include "Engine/Debug/DrawGridSystem.h"
@@ -77,6 +78,7 @@ namespace MyEngine
         {"SoftBodyResponseSystem", []() { return new SoftBodyResponseSystem; }},
         // Gameplay
         {"SteeringBehaviorSystem", []() { return new SteeringBehaviorSystem; }},
+        {"FlyingCameraSystem", []() { return new FlyingCameraSystem; }},
         // Debug Systems
         {"DebugSystem", []() { return new DebugSystem; }},
         {"DrawGridSystem", []() { return new DrawGridSystem; }},
