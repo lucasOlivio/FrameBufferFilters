@@ -70,6 +70,13 @@ namespace MyEngine
                 renderInfo.FBOViewID = pFrameBufferView->FBOID;
             }
 
+            TilingComponent* pTiling = pScene->Get<TilingComponent>(entityId);
+            if (pTiling)
+            {
+                renderInfo.tileAxis = pTiling->axis;
+                renderInfo.tileOffset = pTiling->offset;
+            }
+
             if (pModel->useTransparency)
             {
                 for (uint fboid : pModel->FBOIDs)

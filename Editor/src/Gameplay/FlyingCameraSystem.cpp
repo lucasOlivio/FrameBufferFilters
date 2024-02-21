@@ -14,7 +14,7 @@
 #include "Engine/Utils/Math.h"
 
 #define DEFAULT_MOUSE_SENSITIVITY 0.001f
-#define DEFAULT_CAMERA_SPEED 100.0f
+#define DEFAULT_CAMERA_SPEED 1000.0f
 
 namespace MyEngine
 {

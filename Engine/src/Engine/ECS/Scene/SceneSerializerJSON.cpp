@@ -492,6 +492,7 @@ namespace MyEngine
         parser.SetMember(jsonObject, "diffuse", lightIn.diffuse, allocator);
         parser.SetMember(jsonObject, "direction", lightIn.direction, allocator);
         parser.SetMember(jsonObject, "directionOffset", lightIn.directionOffset, allocator);
+        parser.SetMember(jsonObject, "positionOffset", lightIn.positionOffset, allocator);
         parser.SetMember(jsonObject, "params", lightIn.params, allocator);
         parser.SetMember(jsonObject, "specular", lightIn.specular, allocator);
         parser.SetMember(jsonObject, "status", lightIn.status, allocator);
@@ -1082,6 +1083,7 @@ namespace MyEngine
         parser.GetValue(jsonObject["diffuse"], lightOut.diffuse);
         parser.GetValue(jsonObject["direction"], lightOut.direction);
         parser.GetValue(jsonObject["directionOffset"], lightOut.directionOffset);
+        parser.GetValue(jsonObject["positionOffset"], lightOut.positionOffset);
         parser.GetValue(jsonObject["params"], lightOut.params);
         parser.GetValue(jsonObject["specular"], lightOut.specular);
         parser.GetValue(jsonObject["status"], lightOut.status);

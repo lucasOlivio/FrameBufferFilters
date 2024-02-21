@@ -14,6 +14,8 @@
 #include "Engine/Graphics/Animations/AnimationSystem.h"
 #include "Engine/Graphics/Animations/AnimationPlayerSystem.h"
 #include "Engine/Graphics/Lights/LightSystem.h"
+#include "Engine/Graphics/Lights/LightFlickerSystem.h"
+#include "Engine/Graphics/Materials/MaterialOffsetSystem.h"
 #include "Engine/Graphics/Shaders/ShaderSystem.h"
 #include "Engine/Graphics/Particles/ParticleEmissionSystem.h"
 #include "Engine/Graphics/Particles/ParticleUpdaterSystem.h"
@@ -56,6 +58,8 @@ namespace MyEngine
         {"ModelRenderSystem", []() { return new ModelRenderSystem; }},
         {"RenderSystem", []() { return new RenderSystem; }},
         {"LightSystem", []() { return new LightSystem; }},
+        {"LightFlickerSystem", []() { return new LightFlickerSystem; }},
+        {"MaterialOffsetSystem", []() { return new MaterialOffsetSystem; }},
         {"AnimationSystem", []() { return new AnimationSystem; }},
         {"AnimationPlayerSystem", []() { return new AnimationPlayerSystem; }},
         {"ParticleEmissionSystem", []() { return new ParticleEmissionSystem; }},
