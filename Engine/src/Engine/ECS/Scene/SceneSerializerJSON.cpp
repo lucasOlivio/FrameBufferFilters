@@ -511,6 +511,7 @@ namespace MyEngine
         ParserJSON parser = ParserJSON();
 
         parser.SetMember(jsonObject, "isActive", modelIn.isActive, allocator);
+        parser.SetMember(jsonObject, "isDoubleSideFace", modelIn.isDoubleSideFace, allocator);
         parser.SetMember(jsonObject, "doNotLight", modelIn.doNotLight, allocator);
         parser.SetMember(jsonObject, "isWireframe", modelIn.isWireframe, allocator);
         parser.SetMember(jsonObject, "isDynamic", modelIn.isDynamic, allocator);
@@ -1100,6 +1101,7 @@ namespace MyEngine
         ParserJSON parser = ParserJSON();
 
         parser.GetValue(jsonObject["isActive"], modelOut.isActive);
+        parser.GetValue(jsonObject["isDoubleSideFace"], modelOut.isDoubleSideFace);
         parser.GetValue(jsonObject["doNotLight"], modelOut.doNotLight);
         parser.GetValue(jsonObject["isWireframe"], modelOut.isWireframe);
         parser.GetValue(jsonObject["defaultColor"], modelOut.defaultColor);
