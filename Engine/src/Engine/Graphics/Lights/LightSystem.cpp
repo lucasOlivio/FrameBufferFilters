@@ -105,6 +105,10 @@ namespace MyEngine
     void LightSystem::m_UpdateAttenUL(LightComponent* pLight, iShaderProgram* pShader)
     {
         glm::vec4 newAtten = pLight->atten * pLight->flickerOffset;
+        if (pLight->flickerOffset == glm::vec4(0.0f))
+        {
+            newAtten = pLight->atten;
+        }
         pShader->SetUniformVec4((pLight->ulBasePath + "atten").c_str(), newAtten);
     }
 
